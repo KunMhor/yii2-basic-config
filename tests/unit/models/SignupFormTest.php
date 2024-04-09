@@ -1,5 +1,5 @@
 <?php
-    namespace test\unit\models;
+    namespace tests\unit\models;
 
     use app\models\SignupForm;
 
