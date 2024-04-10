@@ -93,10 +93,10 @@ workflows:
   test_and_deploy:
     jobs:
       - test
-      - deploy:
-          requires:
-            - test
-          context: yii2
-          filters:
-            branches:
-              only: main
+  #    - deploy:
+  #        requires:
+  #          - test
+  #        context: yii2
+  #        filters:
+  #          branches:
+  #            only: main
