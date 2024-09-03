@@ -79,7 +79,7 @@ workflows:
   version: 2
 
   # Run deploy job after successful test job on main branch
-  test_and_deploy:
+  test_n_deploy:
     jobs:
       - test
       - deploy:
