@@ -79,13 +79,13 @@ workflows:
   version: 2
 
   # Run deploy job after successful test job on main branch
-  test_and_deploy:
+  test_n_deploy:
     jobs:
       - test
       - deploy:
           requires:
             - test
-          context: yii2  #context คือตัวแปรที่อยู่บน circleci
+          context: yii2  #context ¤×ÍµÑÇá»Ã·ÕèÍÂÙèº¹ circleci
           filters:
             branches:
               only: main
