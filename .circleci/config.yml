@@ -71,8 +71,8 @@ jobs:
       #     command: sshpass -p "${PASSWORDYII2}" scp -v -o StrictHostKeyChecking=no code.zip ${USERNAMEYII2}@${IPYII2}:/var/www/html/tests/
 
       # Deploy via SSH
-      - run:
-          name: Deploy via SSH
+      #- run:
+          #name: Deploy via SSH
           #command: sshpass -p "${PASSWORDYII2}" ssh -v -o StrictHostKeyChecking=no ${USERNAMEYII2}@${IPYII2} 'cd /var/www/html/dev3 && git pull && echo "<?php return ['host' => '10.250.1.99', 'username' => 'yii2-testing', 'password' => 'JYR.gpf5qrt6kxe6jrq']; ?>" > /var/www/html/dev3/config/db.php && echo "Deployment successful!"'
 # Orchestrate our job run sequence
 workflows:
@@ -82,10 +82,10 @@ workflows:
   test_n_deploy:
     jobs:
       - test
-      - deploy:
-          requires:
-            - test
-          context: yii2  #context คือตัวแปรที่อยู่บน circleci
-          filters:
-            branches:
-              only: main
+      #- deploy:
+      #    requires:
+      #      - test
+      #    context: yii2  #context คือตัวแปรที่อยู่บน circleci
+      #    filters:
+      #      branches:
+      #        only: main
